@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Genetic Name Generator</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/genetic-js/js/genetic-0.1.14.js"></script>
+    <script src="javascript/app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>GenNameGen</h1>
+<div class="controls">
+Required fitness:  <input id="requiredFitness" type="number" value="450"><br>
+Good Ending Bonus: <input id="goodEndingBonus" type="number" value="300"><br>
+Good Combo Bonus: <input id="goodComboBonus" type="number" value="30"><br>
+Bonus for every letter: <input id="letterBonus" type="number" value="10"><br>
+Bad Letter Penalty: <input id="badLetterPenalty" type="number" value="30"><br>
+Bad Combo Penalty: <input id="badComboPenalty" type="number" value="30"><br>
+Duplicates Penalty: <input id="duplicatePenalty" type="number" value="15"><br><br>
+    Mutation rate: <input id="mutRate" type="number" value="0.3"><br>
+    Crossover rate: <input id="crossRate" type="number" value="0.3">
+</div>
+
+<button id="solve">Find a name</button>
+<table id="results">
+    <thead>
+    <tr>
+        <th>Generation</th>
+        <th>Fitness</th>
+        <th>Generated Name</th>
+    </tr>
+    </thead>
+    <tbody style="font-family: monospace;">
+    </tbody>
+</table>
+</body>
+</html>
